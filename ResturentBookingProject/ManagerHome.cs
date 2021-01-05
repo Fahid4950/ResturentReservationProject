@@ -38,5 +38,10 @@ namespace ResturentBookingProject
             LoginForm f1 = new LoginForm();
             f1.ShowDialog();
         }
+
+        private void ManagerHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

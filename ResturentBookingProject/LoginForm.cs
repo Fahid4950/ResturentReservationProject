@@ -76,5 +76,17 @@ namespace ResturentBookingProject
 
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserRegistration uu = new UserRegistration();
+            uu.ShowDialog();
+        }
     }
 }
