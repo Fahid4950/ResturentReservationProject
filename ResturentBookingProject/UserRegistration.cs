@@ -60,7 +60,7 @@ namespace ResturentBookingProject
             else
                 gen = FemaleradioButton2.Text;
 
-            string sql = "INSERT INTO Users(Username,Password,Email,DateOfBirth,usertype,BloodGroup) VALUES('" + UsernametextBox.Text + "','" + PasswordtextBox.Text + "','" + EmailtextBox.Text + "','" + dateTimePicker.Text + "','" + gen + "','" + comboBox1.Text + "')";
+            string sql = "INSERT INTO Users(Username,Password,Email,DateOfBirth,Gender,usertype) VALUES('" + UsernametextBox.Text + "','" + PasswordtextBox.Text + "','" + EmailtextBox.Text + "','" + dateTimePicker.Text + "','" + gen + "','" + comboBox1.Text + "')";
             SqlCommand command = new SqlCommand(sql,connection);
             int result = command.ExecuteNonQuery();
             connection.Close();
@@ -80,6 +80,13 @@ namespace ResturentBookingProject
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm ff1 = new LoginForm();
+            ff1.ShowDialog();
         }
     }
 }
